@@ -4,13 +4,18 @@ using namespace std;
 
 class A
 { 
+    public:
     int a,b;
-    protected:
     void setData(int x)
     {
         a=x;
         
     }
+    void showData()
+    {
+        cout<<a;
+    }
+    
 };
 
 class B :public A
@@ -20,12 +25,16 @@ void setValue(int y)
 {
     setData(y);
 }
+void showValue()
+{
+    showData();
+}
 
 };
 
 int main()
 {
-    int y;
     B obj;
-    obj.setValue(y);
+    obj.setValue(5);
+    obj.showValue();
 }
