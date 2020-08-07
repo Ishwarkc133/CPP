@@ -1,12 +1,16 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-template<typename T>
-T add(T x, T y)
+
+template <class T>
+T  big (T a, T b) 
 {
-    return x+y;
+  T temp;
+  temp = (a>b)? a : b;
+  return (temp);
 }
 
-int main()
+int main () 
 {
-    cout<<add(2.5,2);
+    cout<<big(5.2,2.5)<<endl;
+    cout<<big(2,5);
 }
